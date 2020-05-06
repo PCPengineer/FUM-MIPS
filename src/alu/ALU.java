@@ -5,6 +5,8 @@
  */
 package alu;
 
+import java.util.InputMismatchException;
+
 /**
  *
  * @author Aref
@@ -47,6 +49,17 @@ public class ALU {
 
     public String getZero() {
         return zero;
+    }
+    
+    public void doOperatoin(){
+        switch(opcode){
+            case ADD:output=add();break;
+            case SUB:output=sub();break;
+            case SLT:output=slt();break;
+            case AND:output=and();break;
+            case OR:output=or();break;
+            default:throw new InputMismatchException("opcode: "+opcode+" is not a valid opcode");
+        }
     }
     
     private String slt(){
