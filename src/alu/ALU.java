@@ -55,7 +55,7 @@ public class ALU {
         switch(opcode){
             case ADD:output=add();break;
             case SUB:output=sub();break;
-            case SLT:output=slt();break;
+            case SLT:zero=slt();break;
             case AND:output=and();break;
             case OR:output=or();break;
             default:throw new InputMismatchException("opcode: "+opcode+" is not a valid opcode");
