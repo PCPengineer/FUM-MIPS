@@ -21,7 +21,7 @@ public class Register {
             return false;
         }
         for (int i = 0; i < data.length(); i++) {
-            if (data.charAt(i) != '0' || data.charAt(i) != '1') {
+            if (data.charAt(i) != '0' && data.charAt(i) != '1') {
                 return false;
             }
         }

@@ -16,7 +16,7 @@ public class Memory {
 
     public void initMemory(String[] data, int start) {
         for (int i = start; i < data.length; i++) {
-            if (data[1].length() == 32) {
+            if (data[i].length() == 32) {
                 memory[i] = data[i];
             } else {
                 throw new IllegalArgumentException("data shoud be 32 bit");
@@ -38,8 +38,8 @@ public class Memory {
         return memRead;
     }
 
-    public void setMemRead(boolean memRead) {
-        this.memRead = memRead;
+    public void setMemRead(String memRead) {
+        this.memRead = memRead.equals("1");
     }
     
     

@@ -61,40 +61,40 @@ public class MainControlUnit {
         }
     }
 
-    public boolean isRegDest() {
-        return regDest;
+    public String isRegDest() {
+        return regDest?"1":"0";
     }
 
-    public boolean isJump() {
-        return jump;
+    public String isJump() {
+        return jump?"1":"0";
     }
 
-    public boolean isBranch() {
-        return branch;
+    public String isBranch() {
+        return branch?"1":"0";
     }
 
-    public boolean isMemRead() {
-        return memRead;
+    public String isMemRead() {
+        return memRead?"1":"0";
     }
 
-    public boolean isMemToReg() {
-        return memToReg;
+    public String isMemToReg() {
+        return memToReg?"1":"0";
     }
 
     public String getALUOp() {
         return ALUOp;
     }
 
-    public boolean isMemWrite() {
-        return memWrite;
+    public String isMemWrite() {
+        return memWrite?"1":"0";
     }
 
-    public boolean isALUSrc() {
-        return ALUSrc;
+    public String isALUSrc() {
+        return ALUSrc?"1":"0";
     }
 
-    public boolean isRegWrite() {
-        return regWrite;
+    public String isRegWrite() {
+        return regWrite?"1":"0";
     }
 
 }

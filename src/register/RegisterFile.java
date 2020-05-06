@@ -21,8 +21,8 @@ public class RegisterFile {
     private void init() {
         for (int i = 0; i < registers.length; i++) {
             registers[i] = new Register();
+            registers[i].setData(String.format("%32s", Integer.toHexString(0)).replaceAll(" ", "0"));
         }
-        registers[0].setData(String.format("%32s", Integer.toHexString(0)).replaceAll(" ", "0"));
         registers[0].setEnable(false);
     }
 
@@ -61,8 +61,8 @@ public class RegisterFile {
         return regWrite;
     }
 
-    public void setRegWrite(boolean regWrite) {
-        this.regWrite = regWrite;
+    public void setRegWrite(String regWrite) {
+        this.regWrite = "1".equals(regWrite);
     }
     
     

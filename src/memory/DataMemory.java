@@ -27,8 +27,8 @@ public class DataMemory extends Memory{
         return memWrite;
     }
 
-    public void setMemWrite(boolean memWrite) {
-        this.memWrite = memWrite;
+    public void setMemWrite(String memWrite) {
+        this.memWrite = memWrite.equals("1");
     }
     
     

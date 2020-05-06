@@ -10,5 +10,10 @@ package memory;
  * @author Mrhb
  */
 public class InstructionMemory extends Memory{
-    
+    @Override
+    public String getData(String address) {
+        int index = Integer.parseInt(address, 2);
+        index /= 4;
+        return memory[index];
+    }
 }

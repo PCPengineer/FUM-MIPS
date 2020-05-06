@@ -14,14 +14,14 @@ import java.util.InputMismatchException;
 public class ALU {
 
     private String input1, input2, opcode, output, zero;
-    private final String AND = "0000", OR = "0001", ADD = "0010", SUB = "0110", SLT = "0111";
-    private final int bits = 2;
+    private final String AND = "0000", OR = "0001", ADD = "100000", SUB = "100010", SLT = "0111";
+    private final int bits = 32;
 
-    public ALU(String input1, String input2, String opcode) {
-        this.input1 = input1;
-        this.input2 = input2;
-        this.opcode = opcode;
-    }
+//    public ALU(String input1, String input2, String opcode) {
+//        this.input1 = input1;
+//        this.input2 = input2;
+//        this.opcode = opcode;
+//    }
 
     public void setInput1(String input1) {
         this.input1 = input1;
@@ -92,7 +92,7 @@ public class ALU {
     private String add() {
         String result;
         result=addBitStrings(new StringBuilder(input1), new StringBuilder(input2));
-        result = result.substring(result.length() - (bits), result.length());
+        result = result.substring(result.length() - (bits));
         return result;
     }
 
@@ -188,9 +188,5 @@ public class ALU {
         return len1; // If len1 >= len2 
     } 
     
-    public static void main(String[] args) {
-        ALU a = new ALU("01","10", "0010");
-        System.out.println(a.or());
-    }
 }
 
